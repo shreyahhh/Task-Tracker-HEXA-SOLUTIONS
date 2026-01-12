@@ -5,10 +5,28 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Use /tmp for Vercel serverless, local database folder for development
+// Vercel serverless functions have read-only filesystem except /tmp
+let dbDir = process.env.VERCEL 
+  ? path.join('/tmp', 'database')
+  : path.join(__dirname, '../database');
+
 // Ensure database directory exists
-const dbDir = path.join(__dirname, '../database');
 if (!fs.existsSync(dbDir)) {
-  fs.mkdirSync(dbDir, { recursive: true });
+  try {
+    fs.mkdirSync(dbDir, { recursive: true });
+  } catch (error) {
+    console.error('❌ Error creating database directory:', error.message);
+    // Fallback to /tmp if original location fails
+    if (!process.env.VERCEL) {
+      dbDir = path.join('/tmp', 'database');
+      if (!fs.existsSync(dbDir)) {
+        fs.mkdirSync(dbDir, { recursive: true });
+      }
+    } else {
+      throw error;
+    }
+  }
 }
 
 const dbPath = path.join(dbDir, 'tasks.json');
