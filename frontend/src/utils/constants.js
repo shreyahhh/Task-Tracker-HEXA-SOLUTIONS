@@ -27,6 +27,8 @@ export const STATUS_OPTIONS = [
 ];
 
 // API Base URL - uses environment variable in production, localhost in development
+// If VITE_API_URL is not set in production, it will try to use /api (same domain)
+// This requires the environment variable to be set in Vercel for cross-domain backend
 export const API_BASE_URL = import.meta.env.VITE_API_URL || 
   (import.meta.env.PROD ? '/api' : 'http://localhost:5000/api');
 
