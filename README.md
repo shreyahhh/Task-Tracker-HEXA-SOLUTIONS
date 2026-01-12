@@ -220,13 +220,7 @@ This project is ready for deployment on Vercel. See [DEPLOYMENT.md](./DEPLOYMENT
 **Backend:**
 - `PORT` - Server port (optional, defaults to 5000)
 - `NODE_ENV` - Environment (`production`)
-
-For complete deployment guide, see [DEPLOYMENT.md](./DEPLOYMENT.md).
-
-## License
-
-This project is open source and available under the MIT License.
-
+  
 ---
 
 **Note**: Click the document icon (📄) in the navbar to view detailed tech stack documentation.
