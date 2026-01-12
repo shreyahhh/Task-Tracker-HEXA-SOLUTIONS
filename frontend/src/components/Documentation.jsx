@@ -21,7 +21,7 @@ const Documentation = ({ onClose }) => {
           {/* Overview */}
           <section className="bg-[#111111] border border-[#2A2A2A] rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed">
               TaskFlow is a modern, full-stack task management application designed to help you organize 
               your tasks and boost productivity. Built with cutting-edge technologies, it offers a sleek 
               dark theme interface with powerful features for task management.
@@ -39,7 +39,7 @@ const Documentation = ({ onClose }) => {
               {/* Frontend */}
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Frontend</h3>
-                <ul className="space-y-2 text-gray-400">
+                <ul className="space-y-2 text-gray-400 text-sm">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-vercel-blue rounded-full"></span>
                     <span><strong className="text-white">React 18</strong> - UI Library</span>
@@ -70,7 +70,7 @@ const Documentation = ({ onClose }) => {
               {/* Backend */}
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Backend</h3>
-                <ul className="space-y-2 text-gray-400">
+                <ul className="space-y-2 text-gray-400 text-sm">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                     <span><strong className="text-white">Node.js</strong> - Runtime</span>
@@ -138,10 +138,10 @@ const Documentation = ({ onClose }) => {
               <h2 className="text-2xl font-semibold text-white">Architecture</h2>
             </div>
             
-            <div className="space-y-4 text-gray-400">
+            <div className="space-y-4 text-gray-400 text-sm">
               <div>
                 <h3 className="text-white font-semibold mb-2">Frontend Structure</h3>
-                <ul className="space-y-1 text-sm ml-4">
+                <ul className="space-y-1 ml-4">
                   <li>• Component-based architecture with React</li>
                   <li>• Context API for global state management</li>
                   <li>• Custom hooks for reusable logic</li>
@@ -150,7 +150,7 @@ const Documentation = ({ onClose }) => {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2">Backend Structure</h3>
-                <ul className="space-y-1 text-sm ml-4">
+                <ul className="space-y-1 ml-4">
                   <li>• RESTful API with Express.js</li>
                   <li>• MVC pattern (Models, Controllers, Routes)</li>
                   <li>• Middleware for validation and error handling</li>
@@ -173,21 +173,21 @@ const Documentation = ({ onClose }) => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-black border border-[#2A2A2A] rounded"></div>
-                    <span className="text-xs text-gray-400">Background</span>
+                    <span className="text-sm text-gray-400">Background</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-[#111111] border border-[#2A2A2A] rounded"></div>
-                    <span className="text-xs text-gray-400">Surface</span>
+                    <span className="text-sm text-gray-400">Surface</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-vercel-blue rounded"></div>
-                    <span className="text-xs text-gray-400">Primary</span>
+                    <span className="text-sm text-gray-400">Primary</span>
                   </div>
                 </div>
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2 text-sm">Typography</h3>
-                <div className="space-y-1 text-xs text-gray-400">
+                <div className="space-y-1 text-sm text-gray-400">
                   <p>Font: Inter</p>
                   <p>Headings: Bold</p>
                   <p>Body: Regular</p>
@@ -195,7 +195,7 @@ const Documentation = ({ onClose }) => {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2 text-sm">Spacing</h3>
-                <div className="space-y-1 text-xs text-gray-400">
+                <div className="space-y-1 text-sm text-gray-400">
                   <p>Compact Design</p>
                   <p>Consistent Padding</p>
                   <p>Responsive Gaps</p>
@@ -203,7 +203,7 @@ const Documentation = ({ onClose }) => {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2 text-sm">Theme</h3>
-                <div className="space-y-1 text-xs text-gray-400">
+                <div className="space-y-1 text-sm text-gray-400">
                   <p>Dark Mode</p>
                   <p>Vercel-inspired</p>
                   <p>Modern UI</p>
@@ -218,62 +218,33 @@ const Documentation = ({ onClose }) => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
                 <code className="px-2 py-1 bg-[#1A1A1A] text-green-400 rounded text-xs">GET</code>
-                <code className="text-gray-300">/api/tasks</code>
+                <code className="text-gray-300 text-sm">/api/tasks</code>
                 <span className="text-gray-400">- Get all tasks</span>
               </div>
               <div className="flex items-start gap-3">
                 <code className="px-2 py-1 bg-[#1A1A1A] text-blue-400 rounded text-xs">POST</code>
-                <code className="text-gray-300">/api/tasks</code>
+                <code className="text-gray-300 text-sm">/api/tasks</code>
                 <span className="text-gray-400">- Create task</span>
               </div>
               <div className="flex items-start gap-3">
                 <code className="px-2 py-1 bg-[#1A1A1A] text-yellow-400 rounded text-xs">PUT</code>
-                <code className="text-gray-300">/api/tasks/:id</code>
+                <code className="text-gray-300 text-sm">/api/tasks/:id</code>
                 <span className="text-gray-400">- Update task</span>
               </div>
               <div className="flex items-start gap-3">
                 <code className="px-2 py-1 bg-[#1A1A1A] text-red-400 rounded text-xs">DELETE</code>
-                <code className="text-gray-300">/api/tasks/:id</code>
+                <code className="text-gray-300 text-sm">/api/tasks/:id</code>
                 <span className="text-gray-400">- Delete task</span>
               </div>
               <div className="flex items-start gap-3">
                 <code className="px-2 py-1 bg-[#1A1A1A] text-purple-400 rounded text-xs">PATCH</code>
-                <code className="text-gray-300">/api/tasks/:id/complete</code>
+                <code className="text-gray-300 text-sm">/api/tasks/:id/complete</code>
                 <span className="text-gray-400">- Toggle completion</span>
               </div>
               <div className="flex items-start gap-3">
                 <code className="px-2 py-1 bg-[#1A1A1A] text-cyan-400 rounded text-xs">GET</code>
-                <code className="text-gray-300">/api/tasks/stats</code>
+                <code className="text-gray-300 text-sm">/api/tasks/stats</code>
                 <span className="text-gray-400">- Get statistics</span>
-              </div>
-            </div>
-          </section>
-
-          {/* Deployment */}
-          <section className="bg-[#111111] border border-[#2A2A2A] rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-white mb-4">Deployment</h2>
-            <div className="space-y-4 text-gray-400 text-sm">
-              <div>
-                <h3 className="text-white font-semibold mb-2">Vercel Ready</h3>
-                <p className="mb-2">This application is configured for deployment on Vercel.</p>
-                <ul className="space-y-1 ml-4">
-                  <li>• Frontend: Static site deployment</li>
-                  <li>• Backend: Serverless functions</li>
-                  <li>• Environment variables configured</li>
-                  <li>• Build scripts optimized</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-2">Quick Deploy</h3>
-                <p>See <code className="px-1.5 py-0.5 bg-[#1A1A1A] rounded text-xs">DEPLOYMENT.md</code> for detailed instructions.</p>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-2">Environment Variables</h3>
-                <ul className="space-y-1 ml-4">
-                  <li>• <code className="px-1.5 py-0.5 bg-[#1A1A1A] rounded text-xs">VITE_API_URL</code> - Backend API URL</li>
-                  <li>• <code className="px-1.5 py-0.5 bg-[#1A1A1A] rounded text-xs">PORT</code> - Server port (optional)</li>
-                  <li>• <code className="px-1.5 py-0.5 bg-[#1A1A1A] rounded text-xs">NODE_ENV</code> - Environment mode</li>
-                </ul>
               </div>
             </div>
           </section>
